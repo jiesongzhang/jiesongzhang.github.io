@@ -1,59 +1,130 @@
-<header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiesong Zhang's Homepage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 17px;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 25px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 10px;
+            font-size: 28px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 25px;
+            font-size: 22px;
+        }
+        a {
+            color: #1a0dab;
+            text-decoration: underline;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        .contact {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .email {
+            font-weight: bold;
+            color: #000000;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .paper-list {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .paper {
+            margin-bottom: 15px;
+        }
+        .paper-title {
+            font-weight: bold;
+            font-size: 18px;
+            display: inline;
+        }
+        .coauthors {
+            font-style: normal;
+        }
+        .pdf-link {
+            font-size: 14px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jiesong Zhang (张洁松)</h1>
+    </header>
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
+    <div class="contact">
+        <p>Email: <span class="email">zhjs@alumni.pku.edu.cn</span></p>
+    </div>
 
-# GitHub Pages
+    <div class="section">
+        <h2>About</h2>
+        <p>
+            I received my PhD degree from Peking University in June 2025, supervised by 
+            <a href="https://www.math.pku.edu.cn/teachers/gansb/">Shaobo Gan</a> and 
+            <a href="https://sites.google.com/view/dishengxu/homepage">Disheng Xu</a>. 
+            I will join KTH as a postdoc in October 2025, supervised by 
+            <a href="https://www.kth.se/profile/ddam">Danijela Damjanovic</a>.
+        </p>
+    </div>
 
-_Create a site or blog from your GitHub repositories with GitHub Pages._
+    <div class="section">
+        <h2>Research Interests</h2>
+        <p>Dynamical systems, especially rigidity phenomena in (partially) hyperbolic systems.</p>
+    </div>
 
-</header>
+    <div class="section">
+        <h2>Papers</h2>
+        <ul class="paper-list">
+            <li class="paper">
+                <span class="paper-title">
+                    Invariant distributions of partially hyperbolic systems: fractal graphs, excessive regularity, and rigidity
+                </span>
+                <span class="coauthors">(with Disheng Xu)</span>
+                <a href="https://arxiv.org/abs/2411.19665" class="pdf-link">[Arxiv]</a>
+                <div>Preprint</div>
+            </li>
 
-<!--
-  <<< Author notes: Step 2 >>>
-  Start this step by acknowledging the previous step.
-  Define terms and link to docs.github.com.
-  Historic note: previous version checked for empty pull request, changed to the correct theme `minima`.
--->
+            <li class="paper">
+                <span class="paper-title">
+                    On holomorphic partially hyperbolic systems
+                </span>
+                <span class="coauthors">(with Disheng Xu)</span>
+                <a href="https://arxiv.org/abs/2401.04310" class="pdf-link">[Arxiv]</a>
+                <div>To appear at Journal of the European Mathematical Society</div>
+            </li>
 
-## Step 2: Configure your site
+            <li class="paper">
+                <span class="paper-title">
+                    On the global product structure for uniformly quasiconformal Anosov diffeomorphisms
+                </span>
+                <a href="https://arxiv.org/abs/2311.00251" class="pdf-link">[Arxiv]</a>
+                <div>Discrete and Continuous Dynamical Systems, 2025, 45(2): 548-556</div>
+            </li>
+        </ul>
+    </div>
 
-_You turned on GitHub Pages! :tada:_
-
-We'll work in a branch, `my-pages`, that I created for you to get this site looking great. :sparkle:
-
-Jekyll uses a file titled `_config.yml` to store settings for your site, your theme, and reusable content like your site title and GitHub handle. You can check out the `_config.yml` file on the **Code** tab of your repository.
-
-We need to use a blog-ready theme. For this activity, we will use a theme named "minima".
-
-### :keyboard: Activity: Configure your site
-
-1. Browse to the `_config.yml` file in the `my-pages` branch.
-1. In the upper right corner, open the file editor.
-1. Add a `theme:` set to **minima** so it shows in the `_config.yml` file as below:
-   ```yml
-   theme: minima
-   ```
-1. (optional) You can modify the other configuration variables such as `title:`, `author:`, and `description:` to further customize your site.
-1. Commit your changes.
-1. (optional) Create a pull request to view all the changes you'll make throughout this course. Click the **Pull Requests** tab, click **New pull request**, set `base: main` and `compare:my-pages`.
-1. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
-
-<footer>
-
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
-
----
-
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
-
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
-</footer>
+    <footer>
+        <p>Last updated: August 2025</p>
+    </footer>
+</body>
+</html>
