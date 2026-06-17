@@ -3,155 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jiesong Zhang's homepage">
     <title>Jiesong Zhang's Homepage</title>
     <style>
+        :root {
+            --text: #222;
+            --muted: #666;
+            --link: #0645ad;
+            --rule: #dddddd;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            background: #ffffff;
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
-            font-size: 17px;
-            line-height: 1.6;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 25px;
-            color: #333;
+            max-width: 840px;
+            margin: 40px auto;
+            padding: 0 28px;
+            color: var(--text);
+            font-family: Georgia, "Times New Roman", Times, serif;
+            font-size: 18px;
+            line-height: 1.58;
         }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #2980b9;
-            padding-bottom: 10px;
-            font-size: 28px;
-        }
-        h2 {
-            color: #2980b9;
-            margin-top: 25px;
-            font-size: 22px;
-        }
+
         a {
-            color: #1a0dab;
+            color: var(--link);
             text-decoration: underline;
+            text-underline-offset: 2px;
         }
+
         a:hover {
             text-decoration: none;
         }
-        .contact {
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-            font-size: 18px;
+
+        .profile-photo {
+            margin: 0 0 24px;
         }
+
+        .profile-photo img {
+            display: block;
+            width: 560px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 2px;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: 32px;
+            line-height: 1.2;
+            font-weight: 600;
+        }
+
+        h2 {
+            margin: 30px 0 8px;
+            font-size: 24px;
+            line-height: 1.25;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 0 0 12px;
+        }
+
         .email {
-            font-weight: bold;
-            color: #000000;
+            margin-bottom: 20px;
         }
-        .section {
-            margin-bottom: 25px;
-        }
+
         .paper-list {
-            list-style-type: disc;
-            padding-left: 20px;
+            margin: 8px 0 0 24px;
+            padding: 0;
         }
-        .paper {
+
+        .paper-list li {
             margin-bottom: 15px;
+            padding-left: 2px;
         }
+
         .paper-title {
-            font-weight: bold;
-            font-size: 18px;
-            display: inline;
+            font-weight: 500;
         }
-        .coauthors {
-            font-style: normal;
+
+        .paper-meta {
+            margin-top: 2px;
+            color: var(--muted);
         }
-        .pdf-link {
-            font-size: 14px;
-            margin-left: 5px;
+
+        .status,
+        .venue {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 32px;
+            padding-top: 12px;
+            border-top: 1px solid var(--rule);
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        .hidden-tracker {
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            opacity: 0.01;
+        }
+
+        @media (max-width: 620px) {
+            body {
+                margin: 24px auto;
+                font-size: 17px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Jiesong Zhang (张洁松)</h1>
-    </header>
+    <main>
+        <figure class="profile-photo">
+            <img src="profile.jpg" alt="Jiesong Zhang by the sea at sunset">
+        </figure>
 
-    <div class="contact">
-        <p>Email: <span class="email">jiesongz@kth.se</span></p>
-    </div>
+        <header>
+            <h1>Jiesong Zhang（张洁松）</h1>
+            <p class="email">Email: <a href="mailto:jiesongz@kth.se">jiesongz@kth.se</a></p>
+        </header>
 
-    <div class="section">
-        <h2>About</h2>
-        <p>
-            I received my PhD degree from Peking University in 2025, supervised by 
-            <a href="https://www.math.pku.edu.cn/teachers/gansb/" target="_blank">Shaobo Gan</a> and 
-            <a href="https://sites.google.com/view/dishengxu/homepage" target="_blank">Disheng Xu</a>. 
-            I am currently a postdoc at KTH, supervised by 
-            <a href="https://www.kth.se/profile/ddam" target="_blank">Danijela Damjanovic</a>.
-        </p>
-    </div>
+        <section>
+            <h2>About me</h2>
+            <p>
+                I received my B.Sc. from Shandong University in 2020 and my Ph.D. from Peking University in 2025,
+                under the supervision of
+                <a href="https://www.math.pku.edu.cn/teachers/gansb/" target="_blank" rel="noopener noreferrer">Shaobo Gan</a>
+                and
+                <a href="https://sites.google.com/view/dishengxu/homepage" target="_blank" rel="noopener noreferrer">Disheng Xu</a>.
+                I am currently a postdoctoral researcher at KTH, supervised by
+                <a href="https://www.kth.se/profile/ddam" target="_blank" rel="noopener noreferrer">Danijela Damjanovic</a>.
+            </p>
+        </section>
 
-    <div class="section">
-        <h2>Research Interests</h2>
-        <p>Dynamical systems, especially rigidity phenomena in (partially) hyperbolic systems.</p>
-    </div>
+        <section>
+            <h2>Research Interests</h2>
+            <p>
+                Dynamical systems, especially rigidity phenomena in partially hyperbolic and hyperbolic systems.
+                I am particularly interested in the interaction between dynamical systems and geometry,
+                including foliations, complex geometry, conformal geometry, fractal geometry,
+                contact geometry, Lie groups, and group actions.
+            </p>
+        </section>
 
-    <div class="section">
-        <h2>Papers</h2>
-        <ul class="paper-list">
+        <section>
+            <h2>Papers</h2>
+            <ul class="paper-list">
+                <li>
+                    <span class="paper-title">Invariant complex structures for affine automorphisms: a cocycle viewpoint.</span>
+                    <a href="https://arxiv.org/abs/2606.17794" target="_blank" rel="noopener noreferrer">arXiv</a>
+                    <div class="paper-meta"><span class="status">Preprint.</span></div>
+                </li>
 
-            <li class="paper">
-    <span class="paper-title">
-        Invariant complex structures for affine automorphisms: a cocycle viewpoint
-    </span>
-    <a href="https://arxiv.org/abs/2606.17794" class="pdf-link" target="_blank">[arxiv]</a>
-    <div>Preprint</div>
-</li>
+                <li>
+                    <span class="paper-title">Extremal distributions of partially hyperbolic systems: the Lipschitz threshold.</span>
+                    With Martin Leguil and Disheng Xu.
+                    <a href="https://arxiv.org/abs/2604.01100" target="_blank" rel="noopener noreferrer">arXiv</a>
+                    <div class="paper-meta"><span class="status">Preprint.</span></div>
+                </li>
 
-            
-                <li class="paper">
-                <span class="paper-title">
-                   Extremal distributions of partially hyperbolic systems: the Lipschitz threshold
-                </span>
-                <span class="coauthors">(with Martin Leguil, and Disheng Xu)</span>
-                <a href="https://arxiv.org/abs/2604.01100" class="pdf-link" target="_blank">[arxiv]</a>
-                <div>Preprint</div>
-            </li>
+                <li>
+                    <span class="paper-title">Invariant distributions of partially hyperbolic systems: fractal graphs, excessive regularity, and rigidity.</span>
+                    With Disheng Xu.
+                    <a href="https://arxiv.org/abs/2411.19665" target="_blank" rel="noopener noreferrer">arXiv</a>
+                    <div class="paper-meta"><span class="status">Preprint.</span></div>
+                </li>
 
-            
-            <li class="paper">
-                <span class="paper-title">
-                    Invariant distributions of partially hyperbolic systems: fractal graphs, excessive regularity, and rigidity
-                </span>
-                <span class="coauthors">(with Disheng Xu)</span>
-                <a href="https://arxiv.org/abs/2411.19665" class="pdf-link" target="_blank">[arxiv]</a>
-                <div>Preprint</div>
-            </li>
+                <li>
+                    <span class="paper-title">On holomorphic partially hyperbolic systems.</span>
+                    With Disheng Xu.
+                    <a href="https://arxiv.org/abs/2401.04310" target="_blank" rel="noopener noreferrer">arXiv</a>
+                    <div class="paper-meta"><span class="status">To appear in</span> <span class="venue"><em>Journal of the European Mathematical Society</em></span>.</div>
+                </li>
 
-            <li class="paper">
-                <span class="paper-title">
-                    On holomorphic partially hyperbolic systems
-                </span>
-                <span class="coauthors">(with Disheng Xu)</span>
-                <a href="https://arxiv.org/abs/2401.04310" class="pdf-link" target="_blank">[arxiv]</a>
-                <div>To appear at Journal of the European Mathematical Society</div>
-            </li>
-
-            <li class="paper">
-                <span class="paper-title">
-                    On the global product structure for uniformly quasiconformal Anosov diffeomorphisms
-                </span>
-                <a href="https://arxiv.org/abs/2311.00251" class="pdf-link" target="_blank">[arxiv]</a>
-                <div>Discrete and Continuous Dynamical Systems, 2025, 45(2): 548-556</div>
-            </li>
-        </ul>
-    </div>
+                <li>
+                    <span class="paper-title">On the global product structure for uniformly quasiconformal Anosov diffeomorphisms.</span>
+                    <a href="https://arxiv.org/abs/2311.00251" target="_blank" rel="noopener noreferrer">arXiv</a>
+                    <div class="paper-meta"><span class="status">Published in</span> <span class="venue"><em>Discrete and Continuous Dynamical Systems</em></span>, 45(2): 548&ndash;556, 2025.</div>
+                </li>
+            </ul>
+        </section>
+    </main>
 
     <footer>
-        <p>Last updated: June 2026</p>
+        Last updated: June 2026
     </footer>
 
-    <div style="width:1px; height:1px; overflow:hidden; opacity:0.01;">
+    <div class="hidden-tracker" aria-hidden="true">
         <script type="text/javascript" id="clustrmaps"
-            src="//clustrmaps.com/map_v2.js?d=Df5VRgo-Z6g-mCkzirSj2Jxc2T5K06ftupcq4BFrL1o&cl=ffffff&w=a">
+            src="//clustrmaps.com/map_v2.js?d=Df5VRgo-Z6g-mCkzirSj2Jxc2T5K06ftupcq4BFrL1o&amp;cl=ffffff&amp;w=a">
         </script>
     </div>
-    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "87e7a46445ec40fca048815e222967ec"}'></script><!-- End Cloudflare Web Analytics -->
+    <!-- Cloudflare Web Analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "87e7a46445ec40fca048815e222967ec"}'></script>
+    <!-- End Cloudflare Web Analytics -->
 </body>
 </html>
