@@ -41,16 +41,35 @@
             text-decoration: none;
         }
 
+        .hero {
+            display: flex;
+            align-items: flex-start;
+            gap: 28px;
+            margin-bottom: 24px;
+        }
+
         .profile-photo {
-            margin: 0 0 24px;
+            flex: 0 0 300px;
+            margin: 0;
         }
 
         .profile-photo img {
             display: block;
-            width: 560px;
+            width: 300px;
             max-width: 100%;
             height: auto;
             border-radius: 2px;
+        }
+
+        .profile-photo figcaption {
+            margin-top: 5px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.35;
+        }
+
+        .site-header {
+            padding-top: 8px;
         }
 
         h1 {
@@ -94,7 +113,7 @@
             color: var(--muted);
         }
 
-        .status,
+        .status-preprint,
         .venue {
             color: var(--text);
             font-weight: 600;
@@ -118,7 +137,25 @@
         @media (max-width: 620px) {
             body {
                 margin: 24px auto;
+                padding: 0 22px;
                 font-size: 17px;
+            }
+
+            .hero {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .profile-photo {
+                flex: none;
+            }
+
+            .profile-photo img {
+                width: 280px;
+            }
+
+            .site-header {
+                padding-top: 0;
             }
 
             h1 {
@@ -133,14 +170,19 @@
 </head>
 <body>
     <main>
-        <figure class="profile-photo">
-            <img src="profile.jpg" alt="Jiesong Zhang by the sea at sunset">
-        </figure>
+        <div class="hero">
+            <figure class="profile-photo">
+                <img src="profile.jpg" alt="Jiesong Zhang by the sea at sunset">
+                <figcaption>
+                    photoed by <a href="https://yifaninlogic.github.io/" target="_blank" rel="noopener noreferrer">Yifan Jia</a>
+                </figcaption>
+            </figure>
 
-        <header>
-            <h1>Jiesong Zhang（张洁松）</h1>
-            <p class="email">Email: <a href="mailto:jiesongz@kth.se">jiesongz@kth.se</a></p>
-        </header>
+            <header class="site-header">
+                <h1>Jiesong Zhang（张洁松）</h1>
+                <p class="email">Email: <a href="mailto:jiesongz@kth.se">jiesongz@kth.se</a></p>
+            </header>
+        </div>
 
         <section>
             <h2>About me</h2>
@@ -158,7 +200,7 @@
         <section>
             <h2>Research Interests</h2>
             <p>
-                Dynamical systems, especially rigidity phenomena in partially hyperbolic and hyperbolic systems.
+                <strong>Dynamical systems</strong>, especially rigidity phenomena in partially hyperbolic and hyperbolic systems.
                 I am particularly interested in the interaction between dynamical systems and geometry,
                 including foliations, complex geometry, conformal geometry, fractal geometry,
                 contact geometry, Lie groups, and group actions.
@@ -171,34 +213,34 @@
                 <li>
                     <span class="paper-title">Invariant complex structures for affine automorphisms: a cocycle viewpoint.</span>
                     <a href="https://arxiv.org/abs/2606.17794" target="_blank" rel="noopener noreferrer">arXiv</a>
-                    <div class="paper-meta"><span class="status">Preprint.</span></div>
+                    <div class="paper-meta"><span class="status-preprint">Preprint.</span></div>
                 </li>
 
                 <li>
                     <span class="paper-title">Extremal distributions of partially hyperbolic systems: the Lipschitz threshold.</span>
                     With Martin Leguil and Disheng Xu.
                     <a href="https://arxiv.org/abs/2604.01100" target="_blank" rel="noopener noreferrer">arXiv</a>
-                    <div class="paper-meta"><span class="status">Preprint.</span></div>
+                    <div class="paper-meta"><span class="status-preprint">Preprint.</span></div>
                 </li>
 
                 <li>
                     <span class="paper-title">Invariant distributions of partially hyperbolic systems: fractal graphs, excessive regularity, and rigidity.</span>
                     With Disheng Xu.
                     <a href="https://arxiv.org/abs/2411.19665" target="_blank" rel="noopener noreferrer">arXiv</a>
-                    <div class="paper-meta"><span class="status">Preprint.</span></div>
+                    <div class="paper-meta"><span class="status-preprint">Preprint.</span></div>
                 </li>
 
                 <li>
                     <span class="paper-title">On holomorphic partially hyperbolic systems.</span>
                     With Disheng Xu.
                     <a href="https://arxiv.org/abs/2401.04310" target="_blank" rel="noopener noreferrer">arXiv</a>
-                    <div class="paper-meta"><span class="status">To appear in</span> <span class="venue"><em>Journal of the European Mathematical Society</em></span>.</div>
+                    <div class="paper-meta">To appear in <span class="venue"><em>Journal of the European Mathematical Society</em></span>.</div>
                 </li>
 
                 <li>
                     <span class="paper-title">On the global product structure for uniformly quasiconformal Anosov diffeomorphisms.</span>
                     <a href="https://arxiv.org/abs/2311.00251" target="_blank" rel="noopener noreferrer">arXiv</a>
-                    <div class="paper-meta"><span class="status">Published in</span> <span class="venue"><em>Discrete and Continuous Dynamical Systems</em></span>, 45(2): 548&ndash;556, 2025.</div>
+                    <div class="paper-meta"><span class="venue"><em>Discrete and Continuous Dynamical Systems</em></span>, 45(2): 548&ndash;556, 2025.</div>
                 </li>
             </ul>
         </section>
